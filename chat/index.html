@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Painel de chat</title>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body class="body">
+	<div class="main">
+		<div class="dashboard">
+
+			<div class="profile">
+				<div class="add-profile">
+					<a class="profile__photo-link" href="#">
+						<img class="profile__photo" src="img/henry-avatar.jpg" srcset="img/henry-avatar.jpg 1x, img/henry-avatar@2x.jpg 2x" alt="Henry Jabbawockiez" width="86" height="86">
+					</a>
+
+					<ul class="profile__change">
+						<li class="profile__change-item">
+							<a class="profile__change-link" id="jsDropdownButton" href="#">Henry Jabbawockiez</a>
+							<ul class="profile__dropdown" id="jsDropdown">
+								<li class="dropdown_item">
+									<a class="dropdown__link" href="#">Mudar foto</a>
+								</li>
+								<li class="dropdown_item">
+									<a class="dropdown__link" href="#">Adicionar Conta</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="profile__menu">
+					<li class="menu__item">
+						<a href="#" class="menu__link menu__home">Inicio</a>
+					</li>
+					<li class="menu__item active">
+						<a href="#" class="menu__link menu__chat">Bate-papo</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link menu__contact">Contato</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link menu__notifications">Notificações</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link menu__calendar">Calendario</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link menu__settings">Settings</a>
+					</li>
+				</ul>
+
+				<div class="log-out">
+					<a class="profile__log-out" href="#">Sair</a>
+				</div>
+			</div>
+			
+			<div class="chats">
+				<div class="chats__top">
+					<div class="top__left">
+						<h1 class="chats__heading">Chats</h1>
+						<ul class="chats__recent" tabindex="0">
+							<li class="chats__recent-item" id="jsRecentChats">Bate-papos recentes
+								<ul class="chats__dropdown" id="jsChatsDropdown">
+									<li class="chats__dropdown-item">Bate-papos recentes</li>
+									<li class="chats__dropdown-item">Chats de uma semana</li>
+									<li class="chats__dropdown-item">Bate-papos antigos</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				
+					<button class="chats__button">Crie um novo chat</button>
+				</div>
+
+				<div class="chats__search-wrapper chats-box-shadow">
+					<form class="chats__search" action="https://echo.htmlacademy.ru" method="POST">
+						<div class="form-group form-group-search">
+							<label class="visually-hidden" aria-hidden="true" for="search">Pesquise pessoas, mensagens</label>
+							<input class="chats__input-search" type="search" id="search" name="key" placeholder="Procurar" autocomplete="off" spellcheck="false" required>
+						</div>
+						<div class="form-group form-group-select">
+							<label class="visually-hidden" aria-hidden="true" for="select">Pesquise pessoas, mensagens</label>
+							<select class="chats__input-select" name="group" id="select" required>
+								<option value="messages">Messages</option>
+								<option value="contacts">Contatos</option>
+							</select>
+						</div>
+					</form>
+				</div>
+
+				<a class="person__link" href="#">
+					<div class="chats__person chats-box-shadow">
+						<div class="person__top">
+								<img class="person__avatar" src="img/user-luy.jpg" srcset="img/user-luy.jpg 1x, img/user-luy@2x.jpg 2x" alt="Luy"  width="54"  height="54">
+
+							<div class="name-state">
+								<p class="person__name">Luy Robin</p>
+								<p class="person__state">
+									<img class="state__img typing" src="img/typing-icon.svg" width="15" height="5" alt="Typing">
+									<span class="state__text">escreve</span>
+								</p>
+							</div>
+
+							<p class="person__last-seen">1 minuto atrás</p>
+						</div>
+
+						<div class="person__bottom">
+							<div class="message-wrapper">
+								<p class="person__message">Most of its text is made up from sections 1.10.32–3 of Cicero's De finibus bonorum et malorum (On the Boundaries of Goods and Evils; finibus may also be translated as purposes).</p>
+							</div>
+							<div class="unread-messages" aria-label="Unread messages">2</div>
+						</div>
+					</div>
+				</a>
+				
+				<a class="person__link" href="#">
+					<div class="chats__person chats-box-shadow">
+						<div class="person__top">
+								<img class="person__avatar" src="img/user-jared.jpg" srcset="img/user-jared.jpg 1x, img/user-jared@2x.jpg 2x" alt="Jared"  width="54"  height="54">
+
+							<div class="name-state">
+								<p class="person__name">Jared Sunn</p>
+								<p class="person__state">
+									<img class="state__img typing" src="img/rec-icon.svg" width="12" height="12" alt="Recording">
+									<span class="state__text">grava mensagem de voz</span>
+								</p>
+							</div>
+
+							<p class="person__last-seen">1 minuto atrás</p>
+						</div>
+
+						<div class="person__bottom">
+							<div class="message-wrapper">
+								<p class="person__message"><img class="person__message-img" src="img/mic-icon.svg" width="14" height="14" alt="Microphone" >Mensagem de voz (01:15)</p>
+								<div class="files-wrapper">
+									<span class="person__message-files">
+										<img class="person__message-files-img" src="img/file-icon.svg" width="20" height="20" alt="Files">
+										Arquivos (x2)
+									</span>
+									<span class="person__message-photos">
+										<img class="person__message-files-img" src="img/image-icon.svg" width="20" height="20" alt="Photos">
+										Fotos
+									</span>
+								</div>
+							</div>
+							<div class="unread-messages" aria-label="Unread messages">1</div>
+						</div>
+					</div>
+				</a>
+
+				<a class="person__link opened" href="#">
+					<div class="chats__person chats-box-shadow">
+						<div class="person__top">
+							<img class="person__avatar" src="img/user-nika.jpg" srcset="img/user-nika.jpg 1x, img/user-nika@2x.jpg 2x" alt="Luy"  width="54"  height="54">
+
+							<div class="name-state">
+								<p class="person__name">Nika Jerrardo</p>
+								<p class="person__state">
+									<span class="state__text">online pela última vez há 5 horas</span>
+								</p>
+							</div>
+
+							<p class="person__last-seen">3 dias atrás</p>
+						</div>
+
+						<div class="person__bottom">
+							<div class="message-wrapper">
+								<p class="person__message">Cicero famously orated against his political opponent Lucius Sergius Catilina.</p>
+							</div>
+						</div>
+					</div>
+				</a>
+
+				<a class="person__link" href="#">
+					<div class="chats__person chats-box-shadow">
+						<div class="person__top">
+								<img class="person__avatar" src="img/user-david.jpg" srcset="img/user-david.jpg 1x, img/user-david@2x.jpg 2x" alt="Jared"  width="54"  height="54">
+
+							<div class="name-state">
+								<p class="person__name">David Amrosa</p>
+								<p class="person__state">
+									<span class="state__text">online pela última vez há 5 horas</span>
+								</p>
+							</div>
+
+							<p class="person__last-seen">3 dias atrás</p>
+						</div>
+
+						<div class="person__bottom">
+							<div class="message-wrapper">
+								<p class="person__message">Cicero famously orated against his political opponent Lucius Sergius Catilina.</p>
+								<div class="files-wrapper">
+									<span class="person__message-videos">
+										<img class="person__message-files-img" src="img/video-icon.svg" width="20" height="20" alt="Files">
+										Video (x3)
+									</span>
+								</div>
+							</div>
+							<div class="unread-messages" aria-label="Unread messages">1</div>
+						</div>
+					</div>
+				</a>
+
+			</div>
+
+			<div class="private">
+				<div class="person__top private__top">
+					<a class="private__user-img" href="#">
+						<img class="person__avatar" src="img/user-nika.jpg" srcset="img/user-nika.jpg 1x, img/user-nika@2x.jpg 2x" alt="Luy"  width="54"  height="54">
+					</a>
+
+					<div class="name-state">
+						<p class="person__name">Nika Jerrardo</p>
+						<p class="person__state">
+							<span class="state__text">online pela última vez há 5 horas</span>
+						</p>
+					</div>
+
+					<p class="person__last-seen">
+						<button class="private__button">
+							<img class="private__button-img" src="img/attach.svg" width="24" height="24" alt="Attach">
+						</button>
+						<button class="private__button">
+							<img class="private__button-img" src="img/more-vertical.svg" width="24" height="24" alt="More">
+						</button>
+					</p>
+				</div>
+
+				<div class="private__chat-box">
+					<div class="chat-flow">
+						
+						
+						<div class="private__message message-me">
+							<div class="message__top">
+								<button class="private__settings">
+									<span class="settings__img"></span>
+								</button>
+								<div class="text-wrapper">
+									<p class="private__text">
+										Hello! I tweaked everything you asked. I am sending the finished file.
+										<a class="with-file" href="#">(52.05 Mb) New_Style.zip</a href="#">
+									</p>
+								</div>
+							</div>
+							<p class="private__time">3 dias atrás</p>
+						</div>
+						
+
+						<div class="private__line">3 dias atrás</div>
+
+						
+						<div class="private__message message-they">
+							<div class="message__top">
+								<button class="private__settings">
+									<span class="settings__img"></span>
+								</button>
+								<div class="text-wrapper">
+									<p class="private__text">
+										<a class="with-file" href="#">(40.5 Mb) Style.zip</a href="#">
+									</p>
+								</div>
+							</div>
+							<p class="private__time">4 dias atrás</p>
+						</div>
+						
+						
+						
+						
+						<div class="private__message message-me">
+							<div class="message__top seen">
+								<button class="private__settings">
+									<span class="settings__img"></span>
+								</button>
+								<div class="text-wrapper">
+									<p class="private__text">
+										Hey! Okay, send out.
+									</p>
+								</div>
+							</div>
+							<p class="private__time">4 dias atrás</p>
+						</div>
+				
+						<div class="private__message message-they">
+							<div class="message__top">
+								<button class="private__settings">
+									<span class="settings__img"></span>
+								</button>
+								<div class="text-wrapper">
+									<p class="private__text">
+										Can I send you files?
+									</p>
+								</div>
+							</div>
+							<p class="private__time">4 dias atrás</p>
+						</div>
+						
+						
+						
+						<div class="private__message message-they">
+							<div class="message__top">
+								<button class="private__settings">
+									<span class="settings__img"></span>
+								</button>
+								<div class="text-wrapper">
+									<p class="private__text">
+										Hello! Finally found the time to write to you) I need your help in creating interactive animations for my mobile application.
+									</p>
+								</div>
+							</div>
+							<p class="private__time">4 dias atrás</p>
+						</div>
+						
+						
+						<div class="private__message message-me">
+							<div class="message__top seen">
+								<button class="private__settings">
+									<span class="settings__img"></span>
+								</button>
+								<div class="text-wrapper">
+									<p class="private__text">
+										Hey! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nam, natus neque minima vitae quisquam cupiditate tenetur dolores quae dolor alias laboriosam voluptatem distinctio sunt doloribus expedita earum at possimus. Cumque vel, expedita aspernatur nulla explicabo reiciendis quam error minima?
+									</p>
+								</div>
+							</div>
+							<p class="private__time">4 dias atrás</p>
+						</div>
+						
+						
+						<div class="private__message message-they">
+							<div class="message__top">
+								<button class="private__settings">
+									<span class="settings__img"></span>
+								</button>
+								<div class="text-wrapper">
+									<p class="private__text">
+										Hello! Finally found the time to write to you) I need your help in creating interactive animations for my mobile application.
+									</p>
+								</div>
+							</div>
+							<p class="private__time">4 dias atrás</p>
+						</div>
+						
+						
+						<div class="private__message message-they">
+							<div class="message__top">
+								<button class="private__settings">
+									<span class="settings__img"></span>
+								</button>
+								<div class="text-wrapper">
+									<p class="private__text">
+										Hello! Finally found the time to write to you) I need your help in creating interactive animations for my mobile application.
+									</p>
+								</div>
+							</div>
+							<p class="private__time">4 dias atrás</p>
+						</div>
+						
+
+					</div>
+				</div>
+
+				<div class="private__chat-bottom">
+					<hr class="line">
+					<div class="form-wrapper">
+						<form class="private__form" method="POST" action="https://echo.htmlacademy.ru">
+							<button class="private__form-button plus-button" id="jsOpenButtons" type="button">
+								<img class="private__form-img" src="img/w-plus.svg" width="24" height="24" alt="Plus">
+							</button>
+							<ul class="send-buttons__list" id="jsButtonsList">
+								<li class="send-buttons__item">
+									<button class="send-buttons__button" type="button">
+										<span class="send-buttons__img btn-media"></span>
+									</button>
+								</li>
+								<li class="send-buttons__item">
+									<button class="send-buttons__button" type="button">
+										<span class="send-buttons__img btn-image"></span>
+									</button>
+								</li>
+								<li class="send-buttons__item">
+									<button class="send-buttons__button" type="button">
+										<span class="send-buttons__img btn-file"></span>
+									</button>
+								</li>
+							</ul>
+							<div class="private__form-group">
+								<input class="private__form-input" name="message" type="text" required autocomplete="off" spellcheck="false" placeholder="Type a message here">
+							</div>
+							<button type="button" class="private__form-smile">
+								<img class="private__form-smile-img" src="img/smile.svg" width="24" height="24" alt="Smile">
+							</button>
+							<button type="submit" class="private__form-send plus-button">
+								<img class="private__form-navigation" src="img/navigation.svg" width="20" height="20" alt="Send">
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
